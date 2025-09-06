@@ -11,7 +11,7 @@ const AllPosts = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const url = searchQuery ? `http://localhost:5000/api/posts?search=${encodeURIComponent(searchQuery)}` : 'http://localhost:5000/api/posts';
+        const url = searchQuery ? `/api/posts?search=${encodeURIComponent(searchQuery)}` : 'http://localhost:5000/api/posts';
         const res = await axios.get(url);
         setPosts(res.data);
       } catch (err) {

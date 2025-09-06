@@ -15,7 +15,7 @@ const MyPosts = () => {
     }
     setLoading(true);
     try {
-      const res = await axios.get('http://localhost:5000/api/posts/my-posts', {
+      const res = await axios.get('/api/posts/my-posts', {
         headers: { 'x-auth-token': token },
       });
       setPosts(res.data);

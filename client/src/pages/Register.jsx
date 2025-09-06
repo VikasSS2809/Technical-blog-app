@@ -7,7 +7,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const handleRegister = async ({ username, password }) => {
-    await axios.post('http://localhost:5000/api/auth/register', { username, password });
+    await axios.post('/api/auth/register', { username, password });
     alert('Registration successful! Please log in.');
     navigate('/login');
   };
